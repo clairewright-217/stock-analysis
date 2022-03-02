@@ -22,14 +22,14 @@ The macro needed to calculate and print the following information in a separate 
 - the total daily volume of each stock over the course of one year (as selected by the user)
 - the return of each stock as a percentage, calculated as the ticker's ending price divided by its starting price over the course of the selected year
 
-To do this, I created a simple for loop to first set each element in the `tickerVolumes`  array to zero.
+To start, I created a simple `For` loop to first set each element in the `tickerVolumes`  array to zero.
 
 ```
 For i = 0 To 11
     tickerVolumes(i) = 0
  Next i
  ```
-Then I created a more complex for loop that looped through all of the rows of the selected worksheet ("2017" or "2018"). First, based on the `tickerIndex` value, it added up the total ticker volumes for the selected ticker. Then, it set the ticker starting price and ticker ending price based on a conditional statement. Finally, it bumped up the `tickerIndex` value based on the same conditional statement. 
+Then I created a more complex `For` loop that looped through all of the rows of the selected worksheet ("2017" or "2018"). First, based on the `tickerIndex` value, it added up the total ticker volumes for the selected ticker. Then, it set the ticker starting price and ticker ending price based on a conditional statement. Finally, it bumped up the `tickerIndex` value based on the same conditional statement. 
 
 ```
 For j = 2 To RowCount
